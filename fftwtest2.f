@@ -8,6 +8,7 @@
 
         call dfftw_plan_dft_r2c_2d(plan,M,N,in,out,FFTW_ESTIMATE)
         call dfftw_execute_dft_r2c(plan, in, out)
-        print *,  in, out
+        print *,in
+        print *,out
         call dfftw_destroy_plan(plan)
         end program
